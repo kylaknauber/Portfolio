@@ -49,7 +49,6 @@
     background-color: #bb0be3;
     border: none;
     border-radius: 5px;
-    
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
@@ -58,19 +57,19 @@
     background-color: #bb0be3;
     border-width: 5px;
     border-color: #bb0be3;
-    color: #fff;
     box-sizing: border-box;
     
 }
 
 
     .resume-button::before {
+        color: #242424;
         width: 120%;
         height: 155%;
         position: absolute;
         top: 50%;
         left: 50%;
-        border-radius: 20px;
+        border-radius: 50px;
         border: 1px solid #9a0acb;
         opacity: 0;
         transform: translate(-50%, -50%) scale(1.1);
@@ -80,6 +79,7 @@
     }
 
     .resume-button:hover {
+        color: #242424;
         background-color: #9a0acb;
         border-color: #bb0be3;
         /*border-style: inset;*/
@@ -87,8 +87,9 @@
         box-shadow: 0 0 8px rgba(154, 10, 203, 0.5);
     }
 
-    .resume-button:hover::before {
-                opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-    }
+        .resume-button:hover::before {
+            color: #242424;
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
 
