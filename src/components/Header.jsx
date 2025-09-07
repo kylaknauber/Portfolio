@@ -1,5 +1,6 @@
 ﻿import "../styles/Header.css"
 import devLogo from "../images/dev-logo.svg"
+
 export default function Header() {
     return (
         <header>
@@ -18,7 +19,7 @@ export default function Header() {
                     LinkedIn
                 </a>
                 <a  
-                    target="_blank"
+                    target="_blank"  
                     href="https://github.com/kylaknauber"
                     className="link-text">
                     GitHub
