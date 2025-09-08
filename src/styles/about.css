@@ -59,8 +59,8 @@
     font-size: 12px;
     border-radius: 20px;
     background-color: black;
-    border: 1px solid #242424;
-    /* border: 1px solid #bb0be3; */
+    /* border: 1px solid #242424; */
+    border: 1px solid #bb0be3;
     padding: 2px 5px;
     color: #f0f0f0;
 }
