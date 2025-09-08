@@ -32,31 +32,35 @@
     font-weight: 700;
 }
 
-.about-info > .extra-info > div >  h3 {
+.about-info > .extra-info > div > h3 {
     color: #f0f0f0;
     font-size: 28px;
-    text-decoration: underline;
+    /*
+
+        text-decoration: underline;
     text-decoration-color: #bb0be3;
     text-underline-offset: 16px;
     text-decoration-thickness: 1px;
+    */
+    margin: 0;
 }
 
 .extra-info {
     display: flex;
-    gap: 40px;
+    gap: 60px;
     flex-direction: column;
 }
 
 .skills-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
     margin-top: 18px;
     
 }
 
 .skill {
-    font-size: 12px;
+    font-size: 14px;
     border-radius: 20px;
     background-color: black;
     /* border: 1px solid #242424; */
