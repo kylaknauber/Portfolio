@@ -41,17 +41,29 @@
 
 .project-image {
     border-radius: 10px;
-    
-    width: 220px;
+    width: 240px;
     height: auto;
     align-self: center;
 }
 
 .project-image > img {
-    width: 220px;
+    width: 240px;
+    object-fit: cover;
     border-radius: 5px;
     height: auto;
     align-self: center;
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-container > div > img {
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
 }
 
 .project-title {
@@ -59,6 +71,7 @@
     color: #bb0be3;
     text-align: start;
     margin: 0;
+    
 }
 .project-desc {
     margin: 0;

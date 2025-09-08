@@ -24,7 +24,7 @@ export const projects = [
     },
     {
         id: 3,
-        name: "Facial Paralysis Tracking Application",
+        name: "Facial Paralysis Tracking App",
         description: "Senior Capstone Project | Collaborated with a team to create a cross-platform application to assist patients and physicians in tracking facial paralysis recovery and treatment. Allows patients and physicians to communicate with each other asynchronously via a direct messaging system in the application. Used AI and ML technologies for the device camera to track lighting, faces, etc. to ensure quality images are uploaded and sent to physicians. Used Firebase to store patient and physician data along with patient images. React Native is the backbone of the front-end which allows for a smooth and efficient UI for web and mobile devices.",
         languages: ["React Native", "Firebase", "Node.js", "Google Cloud API", "TensorFlow", "BlazeFace"],
         link: "https://github.com/kylaknauber/Spring2025-GradingFacialParalysis",
