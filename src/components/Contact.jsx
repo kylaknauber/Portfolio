@@ -7,11 +7,11 @@ import linkedinLogo from "../images/linkedin-logo.png"
 
 export default function Contact() {
     const handleEmailClick = () => {
-        //
+        window.open("mailto:kylaknauber@gmail.com", "_blank");
     }
 
     const handleLocationClick = () => {
-
+        window.open("https://www.google.com/maps/dir//hershey,pa/@40.2700357,-76.6733347,13.74z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89c8bb5eccb2aff3:0x7467ff30c8a65e56!2m2!1d-76.6502468!2d40.2859239?entry=ttu&g_ep=EgoyMDI1MDkwMy4wIKXMDSoASAFQAw%3D%3D", "_blank");
     }
 
     const handleLinkedInClick = () => {
