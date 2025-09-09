@@ -27,12 +27,13 @@ export default function Contact() {
             <div>
                 <h1>Contact Me</h1>
                 <div className="contact-info">
-                    <div className="location">
+                    <div onClick={handleLocationClick}
+                        className="location">
                         <img src={locationIcon}></img>
                         <p>Hershey, Pennsylvania</p>
                     </div>
                     <div className="info">
-                        <div>
+                        <div onClick={handleEmailClick}>
                             <img src={emailIcon}></img>
                             <p>kylaknauber@gmail.com</p>
                         </div>
@@ -40,11 +41,11 @@ export default function Contact() {
                             <img src={phoneIcon}></img>
                             <p>+1 (717) - 805 - 3230</p>
                         </div>
-                        <div>
+                        <div onClick={handleLinkedInClick}>
                             <img src={linkedinLogo}></img>
                             <p>kylaknauber</p>
                         </div>
-                        <div>
+                        <div onClick={handleGitHubClick}>
                             <img src={githubLogo}></img>
                             <p>kylaknauber</p>
                         </div>
