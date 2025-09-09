@@ -28,7 +28,7 @@ export default function Projects() {
             if(!isExpanded) {
                 projectRefs.current[id]?.scrollIntoView({
                 behavior: "smooth",
-                block: "start",
+                block: "center",
             })
             }
         }, 200);
