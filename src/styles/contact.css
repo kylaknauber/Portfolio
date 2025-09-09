@@ -1,0 +1,103 @@
+﻿.contact-section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 250px;
+    color: #f0f0f0;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-section > div {
+    width: 930px;
+}
+
+    .contact-section > div > h1 {
+        color: #f0f0f0;
+        font-size: 36px;
+        text-decoration: underline;
+        text-decoration-color: #bb0be3;
+        text-underline-offset: 18px;
+        text-decoration-thickness: 1.5px;
+    }
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+    .contact-info > div {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 30px;
+    }
+
+.contact-info > .info {
+    justify-content: space-between;
+}
+
+.info > div > p {
+    font-size: 14px;
+}
+
+.info > div {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 30px;
+    padding: 0 8px;
+}
+
+    .info > div:hover {
+        transform: scale(1.1);
+        /*box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.2);*/
+    }
+
+.contact-info > div > p {
+    font-size: 18px;
+}
+
+.contact-info > div > img {
+    width: 33px;
+    height: 32px;
+}
+
+.contact-info > div > div {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.contact-info > div > div > img {
+    width: 20px;
+    height: 20px;
+}
+
+@keyframes iconPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2); /* pulsing size */
+    }
+}
+
+/* Apply pulse on hover only to the icon */
+.info > div:hover img {
+    animation: iconPulse 1s infinite alternate;
+    transform-origin: center; /* optional: scale from center */
+}
+
+.contact-info > .location:hover {
+    transform: scale(1.05);
+}
+
+.location:hover img {
+    animation: iconPulse 1s infinite alternate;
+    transform-origin: center;
+}
