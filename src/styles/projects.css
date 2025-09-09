@@ -147,22 +147,31 @@ transition: all 0.3s ease;
     width: 22px;
     height: 22px;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-.title-container > div > .more-info {
-    width: 18px;
-    height: 18px;
-    cursor: pointer;
-}
+    .title-container > div > .more-info {
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .title-container > div > .github-icon:hover {
+        transform: scale(1.1);
+    }
+
+    .title-container > div > .more-info:hover {
+        transform: scale(1.1);
+    }
 
 
-.project-title {
-    font-weight: 700;
-    color: #bb0be3;
-    text-align: start;
-    margin: 0;
-    
-}
+    .project-title {
+        font-weight: 700;
+        color: #bb0be3;
+        text-align: start;
+        margin: 0;
+    }
 .project-desc {
     margin: 0;
     font-weight: 200;
