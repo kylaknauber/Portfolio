@@ -38,42 +38,51 @@
         border-radius: 30px;
     }
 
+.location {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 30px;
+}
+
 .contact-info > .info {
     justify-content: space-between;
 }
 
-.info > div > p {
+.contacts > p {
     font-size: 14px;
 }
 
-.info > div {
+.contacts {
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border-radius: 30px;
     padding: 0 8px;
 }
 
-    .info > div:hover {
+    .contacts:hover {
         transform: scale(1.1);
         /*box-shadow: 0px 4px 6px -2px rgba(0, 0, 0, 0.2);*/
     }
 
-.contact-info > div > p {
+.location > p {
     font-size: 18px;
 }
 
-.contact-info > div > img {
+.location > img {
     width: 33px;
     height: 32px;
 }
 
-.contact-info > div > div {
+.contacts {
     display: flex;
     align-items: center;
     gap: 25px;
 }
 
-.contact-info > div > div > img {
+.contacts > img {
     width: 20px;
     height: 20px;
 }
@@ -89,13 +98,13 @@
 }
 
 /* Apply pulse on hover only to the icon */
-.info > div:hover img {
+.contacts:hover img {
     animation: iconPulse 1s infinite alternate;
     transform-origin: center; /* optional: scale from center */
 }
 
-.contact-info > .location:hover {
-    transform: scale(1.05);
+.location:hover {
+    transform: scale(1.1);
 }
 
 .location:hover img {

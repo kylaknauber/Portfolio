@@ -3,7 +3,7 @@ import { programs } from "../data/data"
 import { useState, useRef } from "react"
 import githubLogo from "../images/github-logo.png"
 import moreInfoIcon from "../images/more-info-icon.svg"
-
+import RevealSection from "../components/RevealSection"
 export default function Projects() {
     const [projects, setProjects] = useState(programs);
     const [isExpanded, setIsExpanded] = useState(false);
@@ -36,9 +36,9 @@ export default function Projects() {
 
     const projectElements = projects.map(project => {
         return (
-            <div key={project.id}
+            <RevealSection key={project.id}
                 ref={el => (projectRefs.current[project.id] = el)}
-                className={`project ${project.toggleView ? "expanded" : ""}`}>
+                classSection={`project ${project.toggleView ? "expanded" : ""}`}>
                 <div className="project-image">
                      <img src={project.images[0]}></img>
                 </div>
@@ -63,19 +63,19 @@ export default function Projects() {
                          )
                      })}
                 </div>
-            </div>
+            </RevealSection>
         )
     })
 
     return (
-        <div className="projects-section">
+        <RevealSection classSection="projects-section">
             <div>
-                <h1>Projects</h1>
+                <h1 className="section-title">Projects</h1>
                 <div className={`projects-container ${isExpanded ? "dimmed" : ""}`}>
                     {projectElements}
                 </div>
             </div>
-        </div>
+        </RevealSection>
     )
 }
 

@@ -45,6 +45,19 @@
     margin: 0;
 }
 
+.skills-heading {
+    color: #f0f0f0;
+    font-size: 28px;
+    /*
+
+        text-decoration: underline;
+    text-decoration-color: #bb0be3;
+    text-underline-offset: 16px;
+    text-decoration-thickness: 1px;
+    */
+    margin: 0;
+}
+
 .extra-info {
     display: flex;
     gap: 60px;

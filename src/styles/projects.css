@@ -12,7 +12,7 @@
     max-width: 930px;
 }
 
-    .projects-section > div > h1 {
+    .section-title {
         color: #f0f0f0;
         font-size: 36px;
         text-decoration: underline;
@@ -20,6 +20,7 @@
         text-underline-offset: 18px;
         text-decoration-thickness: 1.5px;
         margin-bottom: 50px;
+        font-weight: 700;
     }
 
 .projects-container {
@@ -60,10 +61,11 @@ box-shadow: 0px 0px 100px 1px black;
     flex-direction: column;
     padding: 15px;
     gap: 10px;
-    /* justify-content: space-between;*/
+    justify-content: space-between;
     transition: all 0.5s ease-in-out;
     position: relative;
     z-index: 1;
+    height: 300px;
 }
     .project.expanded {
         /*
@@ -119,15 +121,15 @@ transition: all 0.3s ease;
 .project-image {
     border-radius: 10px;
     width: 240px;
-    height: auto;
+    height: 160px;
     align-self: center;
 }
 
 .project-image > img {
     width: 100%;
-    object-fit: cover;
+    object-fit: fill;
     border-radius: 5px;
-    height: auto;
+    height: 160px;
     align-self: center;
 }
 

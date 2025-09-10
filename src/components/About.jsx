@@ -1,4 +1,5 @@
 ﻿import "../styles/About.css"; 
+import RevealSection from "./RevealSection";
 export default function About() {
     const skills = ["Java", "JavaScript", "React", "C++", "C#",
         "HTML", "CSS", "Python", "Vue.js", "Node.js", "Firebase", "MySQL",
@@ -37,7 +38,7 @@ export default function About() {
     })
 
     return (
-        <div className="about-container">
+        <RevealSection classSection="about-container">
             <div className="about-info">
                 <h1>About</h1>
                 <p className="about-message">
@@ -53,27 +54,33 @@ export default function About() {
                 <br></br>
                 <br></br>
                 <br></br>
-                <div className="extra-info">
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <RevealSection classSection="extra-info">
                     <div>
-                        <h3>Skills</h3>
+                        <h3 className="skills-heading">Skills</h3>
                         <div className="skills-container">
                             {skillSection}
                         </div>
                     </div>
                     <div>
-                        <h3>College Courses</h3>
+                        <h3 className="skills-heading">College Courses</h3>
                         <div className="skills-container">
                             {courseSection}
                         </div>
                     </div>
                     <div>
-                        <h3>Extra Courses and Certifications</h3>
+                        <h3 className="skills-heading">Extra Courses and Certifications</h3>
                         <div className="skills-container">
                             {certSection}
                         </div>
                     </div>
-                </div>
+                </RevealSection>
             </div>
-        </div>
+        </RevealSection>
     )
 }

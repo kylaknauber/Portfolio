@@ -4,7 +4,7 @@ import locationIcon from "../images/location-icon.svg"
 import phoneIcon from "../images/phone-icon.svg"
 import githubLogo from "../images/github-logo.png"
 import linkedinLogo from "../images/linkedin-logo.png"
-
+import RevealSection from "../components/RevealSection"
 export default function Contact() {
     const handleEmailClick = () => {
         window.open("mailto:kylaknauber@gmail.com", "_blank");
@@ -23,35 +23,41 @@ export default function Contact() {
     }
 
     return (
-        <div className="contact-section">
+        <RevealSection classSection="contact-section">
             <div>
                 <h1>Contact Me</h1>
                 <div className="contact-info">
-                    <div onClick={handleLocationClick}
-                        className="location">
+                    <RevealSection onClick={handleLocationClick}
+                        classSection="location">
                         <img src={locationIcon}></img>
                         <p>Hershey, Pennsylvania</p>
-                    </div>
+                    </RevealSection>
                     <div className="info">
-                        <div onClick={handleEmailClick}>
+                        <RevealSection
+                            classSection="contacts"
+                            onClick={handleEmailClick}>
                             <img src={emailIcon}></img>
                             <p>kylaknauber@gmail.com</p>
-                        </div>
-                        <div>
+                        </RevealSection>
+                        <RevealSection classSection="contacts">
                             <img src={phoneIcon}></img>
                             <p>+1 (717) - 805 - 3230</p>
-                        </div>
-                        <div onClick={handleLinkedInClick}>
+                        </RevealSection>
+                        <RevealSection
+                            classSection="contacts"
+                            onClick={handleLinkedInClick}>
                             <img src={linkedinLogo}></img>
                             <p>kylaknauber</p>
-                        </div>
-                        <div onClick={handleGitHubClick}>
+                        </RevealSection>
+                        <RevealSection
+                            classSection="contacts"
+                            onClick={handleGitHubClick}>
                             <img src={githubLogo}></img>
                             <p>kylaknauber</p>
-                        </div>
+                        </RevealSection>
                     </div>
                 </div>
             </div>
-        </div>
+        </RevealSection>
     )
 }
