@@ -79,7 +79,8 @@ export default function About() {
     const certSection = certifications.map(cert => {
         return (
             <RevealSection key={cert.id}
-                classSection="skill">{cert.name}</RevealSection>
+                clickableFunc={() => { window.open(cert.credentialLink, "_blank") }}
+                classSection="skill cert">{cert.name}</RevealSection>
         )
     });
 

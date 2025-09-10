@@ -84,3 +84,7 @@
     text-decoration: none;
 }
 
+.skill.cert {
+    cursor: pointer;
+}
+
