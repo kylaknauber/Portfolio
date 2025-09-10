@@ -17,7 +17,7 @@
         font-size: 36px;
         text-decoration: underline;
         text-decoration-color: #bb0be3;
-        text-underline-offset: 18px;
+        text-underline-offset: 16px;
         text-decoration-thickness: 1.5px;
     }
 .about-message {
@@ -25,6 +25,7 @@
     line-height: 1.6;
     color: #f0f0f0;
     margin-bottom: 20px;
+    margin-top: 35px;
 }
 
 .about-message > span {
@@ -73,12 +74,13 @@
 }
 
 .skill {
-    font-size: 14px;
+    font-size: 13px;
     border-radius: 20px;
     background-color: black;
     /* border: 1px solid #242424; */
     border: 1px solid #bb0be3;
-    padding: 2px 5px;
+    padding: 3px 6px;
     color: #f0f0f0;
+    text-decoration: none;
 }
 
