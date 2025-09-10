@@ -53,6 +53,19 @@ export const programs = [
     },
     {
         id: 6,
+        name: "TOH/Sliding Puzzle",
+        description: "Created a application which allows users to pick between playing two games: Towers of Hanoi or a Sliding Puzzle game. This was my first Angular application created in my web programming class.",
+        languages: ["Angular", "TypeScript", "HTML", "CSS"],
+        link: "https://github.com/kylaknauber/TOH-Sliding-Puzzle",
+        images: [],
+        toggleView: false
+    }
+
+]
+
+        /**
+         * {
+        id: 6,
         name: "Car Rental Software",
         description: "Simple GUI for user to create a reservation to rent a car. Stores user information in MySQL database. System will calculate the total cost based on car type and days rented. Users can always update and cancel reservations, in which data for price and dates will be updated in MySQL database.",
         languages: ["Java", "Java Swing", "MySQL"],
@@ -60,5 +73,4 @@ export const programs = [
         images: [carRentalSW],
         toggleView: false
     }
-
-]
+         */
