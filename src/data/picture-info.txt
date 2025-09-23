@@ -1,0 +1,5 @@
+flappy bird: https://pnghut.com
+face logo: <a href="https://www.flaticon.com/free-icons/face-recognition" title="face recognition icons">Face recognition icons created by Andrean Prabowo - Flaticon</a>
+compiler logo: <a href="https://www.flaticon.com/free-icons/compiler" title="compiler icons">Compiler icons created by Karyative - Flaticon</a>
+binge index: <a href="https://www.flaticon.com/free-icons/cinema" title="cinema icons">Cinema icons created by xnimrodx - Flaticon</a>
+uno logo: <a href="https://commons.wikimedia.org/wiki/File:UNO_Logo.svg">UNO</a>, Public domain, via Wikimedia Commons
