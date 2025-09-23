@@ -40,7 +40,7 @@ export default function Projects() {
                 ref={el => (projectRefs.current[project.id] = el)}
                 classSection={`project ${project.toggleView ? "expanded" : ""}`}>
                 <div className="project-image">
-                     <img src={project.images[0]}></img>
+                    <img className={`pic-${[project.id]}`} src={project.images[0]}></img>
                 </div>
                 <div className="title-container">
                      <p className="project-title">{project.name}</p>
@@ -48,7 +48,7 @@ export default function Projects() {
                          <img className="more-info"
                              title="More Info"
                              onClick={() => handleMoreInfoClick(project.id)}
-                             src={moreInfoIcon}></img>
+                             src={moreInfoIcon}></img>    
                          <img className="github-icon"
                              title="Open in GitHub"
                              onClick={() => handleGitHubClick(project.link)}
