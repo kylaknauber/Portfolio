@@ -9,7 +9,7 @@ import flappyBird from "../images/flappy-bird.png"
 import unoGame from "../images/uno.png"
 import unoLogo from "../images/UNO_Logo.svg.png"
 import slidingPuzzle from "../images/sliding-puzzle.png"
-import toh from "../images/toh.png"
+import toh from "../images/toh-game.png"
 import flappyBirdBird from "../images/flappy-bird-bird.png"
 
 export const programs = [

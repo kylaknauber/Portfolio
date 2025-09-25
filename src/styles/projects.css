@@ -153,6 +153,29 @@ transition: all 0.3s ease;
         height: 250px;
     }
 
+.proj-6-img-div {
+    border-radius: 10px;
+    width: 240px;
+    height: 160px;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.proj-6-img-div > img {
+    border-radius: 5px;
+    height: 90px;
+    align-self: center;
+    filter: drop-shadow(1px 1px 5px gray);
+}
+
+.pic-6-1 {
+    width: 110px;
+
+}
+
 .project.expanded .project-image {
     width: 300px;
     height: 210px;

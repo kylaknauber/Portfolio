@@ -40,7 +40,18 @@ export default function Projects() {
                 ref={el => (projectRefs.current[project.id] = el)}
                 classSection={`project ${project.toggleView ? "expanded" : ""}`}>
                 <div className="project-image">
-                    <img className={`pic-${[project.id]}`} src={project.images[0]}></img>
+                    {project.id === 6
+                        ? <div className="proj-6-img-div">
+                            <img
+                                className={`pic-${project.id}-1`}
+                                src={project.images[0]}
+                            ></img>
+                            <img
+                                className={`pic-${project.id}-2`}
+                                src={project.images[1]}
+                            ></img>
+                          </div>
+                        : <img className={`pic-${project.id}`} src={project.images[0]}></img>}
                 </div>
                 <div className="title-container">
                      <p className="project-title">{project.name}</p>
