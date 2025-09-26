@@ -63,15 +63,16 @@ export default function About() {
         }
     ];
 
-    const skillSection = skills.map(skill => {
+    const skillSection = skills.map((skill, index) => {
         return (
-            <RevealSection classSection="skill">{skill}</RevealSection>
+            <RevealSection key={index}
+                classSection="skill">{skill}</RevealSection>
         )
     });
 
-    const courseSection = courses.map(course => {
+    const courseSection = courses.map((course, index) => {
         return (
-            <RevealSection
+            <RevealSection key={index}
                 classSection="skill">{course}</RevealSection>
         )
     });
