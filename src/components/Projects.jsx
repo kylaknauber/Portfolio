@@ -34,25 +34,82 @@ export default function Projects() {
         }, 200);
     }
 
+    console.log(projects);
+
     const projectElements = projects.map(project => {
         return (
             <RevealSection key={project.id}
                 ref={el => (projectRefs.current[project.id] = el)}
                 classSection={`project ${project.toggleView ? "expanded" : ""}`}>
-                <div className="project-image">
-                    {project.id === 6
-                        ? <div className="proj-6-img-div">
-                            <img
-                                className={`pic-${project.id}-1`}
-                                src={project.images[0]}
-                            ></img>
-                            <img
-                                className={`pic-${project.id}-2`}
-                                src={project.images[1]}
-                            ></img>
-                          </div>
-                        : <img className={`pic-${project.id}`} src={project.images[0]}></img>}
-                </div>
+                {project.toggleView ?
+                    <div className="images-wrapper">
+                        <div className="project-image-expanded">
+                            {   // If project is 6, remove first two images, else, remove the first image (removing the thumbnail for the expanded image)
+                                project.id === 6
+                                    ? <>
+                                        <div className="images">
+                                            {project.images.slice(2).map(image => (
+                                                <div key={image} className="expanded-img-div">
+                                                    <img src={image}></img>
+                                                </div>
+                                            ))}
+                                        </div>
+                                        <div className="images">
+                                            {project.images.slice(2).map(image => (
+                                                <div key={image} className="expanded-img-div">
+                                                    <img src={image}></img>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    </>
+                                    : <>
+                                        {project.id === 5 || project.id === 4
+                                            ? 
+                                            <div className={`images project-${project.id}` }>
+                                                {project.images.filter((_, index) => index !== 0).map((image) => (
+                                                    <div key={image} className={`expanded-img-div project-${project.id}`}>
+                                                        <img className={`project-${project.id}-images`} src={image}></img>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                            :
+                                            <>
+                                                <div className="images">
+                                                    {project.images.filter((_, index) => index !== 0).map((image) => (
+                                                        <div key={image} className={`expanded-img-div project-${project.id}`}>
+                                                            <img className={`project-${project.id}-images`} src={image}></img>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                                <div className="images">
+                                                    {project.images.filter((_, index) => index !== 0).map((image) => (
+                                                        <div key={image} className={`expanded-img-div project-${project.id}`}>
+                                                            <img className={`project-${project.id}-images`} src={image}></img>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </>
+                                        }
+                                    </>
+                             }
+                        </div>
+                    </div>
+                    :
+                    <div className="project-image">
+                        {project.id === 6
+                            ? <div className="proj-6-img-div">
+                                <img
+                                    className={`pic-${project.id}-1`}
+                                    src={project.images[0]}
+                                ></img>
+                                <img
+                                    className={`pic-${project.id}-2`}
+                                    src={project.images[1]}
+                                ></img>
+                            </div>
+                            : <img className={`pic-${project.id}`} src={project.images[0]}></img>}
+                    </div>
+                }
                 <div className="title-container">
                      <p className="project-title">{project.name}</p>
                      <div>
@@ -68,9 +125,9 @@ export default function Projects() {
                 </div>
                 <p className={project.toggleView ? "project-desc-all" : "project-desc"}>{project.description}</p>
                 <div className="language-container">
-                     {project.languages.map(lang => {
+                     {project.languages.map((lang, index) => {
                          return (
-                             <div>{lang}</div>
+                             <div key={index}>{lang}</div>
                          )
                      })}
                 </div>

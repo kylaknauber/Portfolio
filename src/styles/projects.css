@@ -87,8 +87,7 @@ box-shadow: 0px 0px 100px 1px black;
         box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.7);
         z-index: 100; /* bring it above */
         background-color: #242424;
-        height: 400px;
-        
+        height: 420px;
     }
 
         .project.expanded .project-title {
@@ -148,10 +147,10 @@ transition: all 0.3s ease;
         filter: drop-shadow(1px 1px 5px gray);
     }
 
-    .project-image > .pic-5 {
-        width: 250px;
-        height: 250px;
-    }
+.project-image > .pic-5 {
+    height: 170px;
+    width: auto;
+}
 
 .proj-6-img-div {
     border-radius: 10px;
@@ -173,7 +172,6 @@ transition: all 0.3s ease;
 
 .pic-6-1 {
     width: 110px;
-
 }
 
 .project.expanded .project-image {
@@ -267,3 +265,66 @@ transition: all 0.3s ease;
         font-size: 12px;
         padding: 2.5px 6px;
     }
+
+/* Different styling for expanded project images */
+.images-wrapper {
+    overflow: hidden;
+    height: 210px;
+}
+
+.project-image-expanded {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.images {
+    display: flex;
+    animation: scrolling 25000ms linear infinite;
+}
+
+.images.project-5{
+    animation: none;
+}
+
+.images.project-4 {
+    animation: none;
+}
+
+.images-wrapper:hover .project-image-expanded .images {
+    animation-play-state: paused;
+}
+
+.expanded-img-div {
+    width: 270px;
+    height: 200px;
+    border-radius: 10px;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+    .expanded-img-div > img {
+        border-radius: 5px;
+        width: 270px;
+        height: 180px;
+        align-self: center;
+    }
+@keyframes scrolling {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.expanded-img-div.project-5 {
+    width: 100px;
+}
+
+.expanded-img-div > .project-5-images {
+    width: 100px;
+}
