@@ -7,7 +7,8 @@ import RevealSection from "../components/RevealSection"
 export default function Projects() {
     const [projects, setProjects] = useState(programs);
     const [isExpanded, setIsExpanded] = useState(false);
-    
+    const [imageExpanded, setImageExpanded] = useState(null);
+
     const projectRefs = useRef({});
 
     const handleGitHubClick = (link) => {
@@ -34,6 +35,10 @@ export default function Projects() {
         }, 200);
     }
 
+    const handleImageClick = (imageData) => {
+        setImageExpanded(imageData);
+    }
+
     console.log(projects);
 
     const projectElements = projects.map(project => {
@@ -43,21 +48,23 @@ export default function Projects() {
                 classSection={`project ${project.toggleView ? "expanded" : ""}`}>
                 {project.toggleView ?
                     <div className="images-wrapper">
-                        <div className="project-image-expanded">
+                        <div className={`project-image-expanded project-${project.id}` }>
                             {   // If project is 6, remove first two images, else, remove the first image (removing the thumbnail for the expanded image)
                                 project.id === 6
                                     ? <>
-                                        <div className="images">
+                                        <div className={`images ${imageExpanded ? "paused" : ""}`}>
                                             {project.images.slice(2).map(image => (
-                                                <div key={image} className="expanded-img-div">
-                                                    <img src={image}></img>
+                                                <div key={image.src} className="expanded-img-div">
+                                                    <img onClick={() => handleImageClick(image)}
+                                                        src={image.src}></img>
                                                 </div>
                                             ))}
                                         </div>
-                                        <div className="images">
+                                        <div className={`images ${imageExpanded ? "paused" : ""}`}>
                                             {project.images.slice(2).map(image => (
-                                                <div key={image} className="expanded-img-div">
-                                                    <img src={image}></img>
+                                                <div key={image.src} className="expanded-img-div">
+                                                    <img onClick={() => handleImageClick(image)}
+                                                        src={image.src}></img>
                                                 </div>
                                             ))}
                                         </div>
@@ -67,24 +74,27 @@ export default function Projects() {
                                             ? 
                                             <div className={`images project-${project.id}` }>
                                                 {project.images.filter((_, index) => index !== 0).map((image) => (
-                                                    <div key={image} className={`expanded-img-div project-${project.id}`}>
-                                                        <img className={`project-${project.id}-images`} src={image}></img>
+                                                    <div key={image.src} className={`expanded-img-div project-${project.id}`}>
+                                                        <img onClick={() => handleImageClick(image)}
+                                                            className={`project-${project.id}-images`} src={image.src}></img>
                                                     </div>
                                                 ))}
                                             </div>
                                             :
                                             <>
-                                                <div className="images">
+                                                <div className={`images ${imageExpanded ? "paused" : ""}`}>
                                                     {project.images.filter((_, index) => index !== 0).map((image) => (
-                                                        <div key={image} className={`expanded-img-div project-${project.id}`}>
-                                                            <img className={`project-${project.id}-images`} src={image}></img>
+                                                        <div key={image.src} className={`expanded-img-div project-${project.id}`}>
+                                                            <img onClick={() => handleImageClick(image)}
+                                                                className={`project-${project.id}-images`} src={image.src}></img>
                                                         </div>
                                                     ))}
                                                 </div>
-                                                <div className="images">
+                                                <div className={`images ${imageExpanded ? "paused" : ""}`}>
                                                     {project.images.filter((_, index) => index !== 0).map((image) => (
-                                                        <div key={image} className={`expanded-img-div project-${project.id}`}>
-                                                            <img className={`project-${project.id}-images`} src={image}></img>
+                                                        <div key={image.src} className={`expanded-img-div project-${project.id}`}>
+                                                            <img onClick={() => handleImageClick(image)}
+                                                                className={`project-${project.id}-images`} src={image.src}></img>
                                                         </div>
                                                     ))}
                                                 </div>
@@ -100,14 +110,14 @@ export default function Projects() {
                             ? <div className="proj-6-img-div">
                                 <img
                                     className={`pic-${project.id}-1`}
-                                    src={project.images[0]}
+                                    src={project.images[0].src}
                                 ></img>
                                 <img
                                     className={`pic-${project.id}-2`}
-                                    src={project.images[1]}
+                                    src={project.images[1].src}
                                 ></img>
                             </div>
-                            : <img className={`pic-${project.id}`} src={project.images[0]}></img>}
+                            : <img className={`pic-${project.id}`} src={project.images[0].src}></img>}
                     </div>
                 }
                 <div className="title-container">
@@ -136,14 +146,25 @@ export default function Projects() {
     })
 
     return (
-        <RevealSection classSection="projects-section">
-            <div>
-                <h1 className="section-title">Projects</h1>
-                <div className={`projects-container ${isExpanded ? "dimmed" : ""}`}>
-                    {projectElements}
+        <>
+            <RevealSection classSection="projects-section">
+                <div>
+                    <h1 className="section-title">Projects</h1>
+                    <div className={`projects-container ${isExpanded ? "dimmed" : ""}`}>
+                        {projectElements}
+                    </div>
                 </div>
-            </div>
-        </RevealSection>
+            </RevealSection>
+            {imageExpanded && 
+                <div className="expanded-image-overlay">
+                    <div className="image-container">
+                        <img onClick={() => handleImageClick(null)}
+                            src={imageExpanded.src}></img>
+                    </div>
+                    <p className="image-caption">{imageExpanded.caption}</p>
+                </div>   
+            }
+        </>
     )
 }
 

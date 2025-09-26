@@ -274,6 +274,14 @@ transition: all 0.3s ease;
 
 .project-image-expanded {
     display: flex;
+}
+
+.project-image-expanded.project-5 {
+    align-items: center;
+    justify-content: center;
+}
+
+.project-image-expanded.project-4 {
     align-items: center;
     justify-content: center;
 }
@@ -289,6 +297,10 @@ transition: all 0.3s ease;
 
 .images.project-4 {
     animation: none;
+}
+
+.images.paused {
+    animation-play-state: paused;
 }
 
 .images-wrapper:hover .project-image-expanded .images {
@@ -311,6 +323,8 @@ transition: all 0.3s ease;
         width: 270px;
         height: 180px;
         align-self: center;
+        transition: transform 0.3s ease;
+        cursor: pointer;
     }
 @keyframes scrolling {
     0% {
@@ -327,4 +341,48 @@ transition: all 0.3s ease;
 
 .expanded-img-div > .project-5-images {
     width: 100px;
+}
+
+/* When clicking an image to view more */
+.expanded-image-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    cursor: zoom-out;
+}
+
+.expanded-image-overlay > .image-container {
+    height: 400px;
+    width: auto;
+    border-radius: 10px;
+}
+
+.expanded-image-overlay > .image-container > img {
+    height: 400px;
+    width: auto;
+    border-radius: 10px;
+    animation: expand 0.3s ease;
+}
+
+@keyframes expand {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.image-caption {
+    color: #f0f0f0;
+    width: 500px;
+    text-align: center;
 }
