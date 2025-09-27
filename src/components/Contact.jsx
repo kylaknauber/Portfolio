@@ -27,7 +27,7 @@ export default function Contact() {
             <div>
                 <h1>Contact Me</h1>
                 <div className="contact-info">
-                    <RevealSection onClick={handleLocationClick}
+                    <RevealSection clickableFunc={handleLocationClick}
                         classSection="location">
                         <img src={locationIcon}></img>
                         <p>Hershey, Pennsylvania</p>
@@ -35,7 +35,7 @@ export default function Contact() {
                     <div className="info">
                         <RevealSection
                             classSection="contacts"
-                            onClick={handleEmailClick}>
+                            clickableFunc={handleEmailClick}>
                             <img src={emailIcon}></img>
                             <p>kylaknauber@gmail.com</p>
                         </RevealSection>
@@ -45,13 +45,13 @@ export default function Contact() {
                         </RevealSection>
                         <RevealSection
                             classSection="contacts"
-                            onClick={handleLinkedInClick}>
+                            clickableFunc={handleLinkedInClick}>
                             <img src={linkedinLogo}></img>
                             <p>kylaknauber</p>
                         </RevealSection>
                         <RevealSection
                             classSection="contacts"
-                            onClick={handleGitHubClick}>
+                            clickableFunc={handleGitHubClick}>
                             <img src={githubLogo}></img>
                             <p>kylaknauber</p>
                         </RevealSection>
