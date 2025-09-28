@@ -24,9 +24,6 @@
         width: 45px;
     }
 
-.my-info {
-}
-
 .my-info > p {
     color: gray;
     font-size: 13px;
@@ -60,4 +57,24 @@
     text-decoration: none;
     font-size: 10px;
     color: gray;
+    transition: transform 0.3s ease;
+}
+
+    .sources > div > a:hover {
+        transform: scale(1.1);
+    }
+
+@keyframes iconPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1); /* pulsing size */
+    }
+}
+
+.logo:hover {
+    animation: iconPulse 1s infinite alternate;
+    transform-origin: center;
 }
