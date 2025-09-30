@@ -1,6 +1,6 @@
 # Portfolio
 
-This project is a simple portfolio webiste created in React. This application includes links to my resume, my contact info, and a few of my most notable projects. There is also information on my programming background, education, skills, and courses I have completed. 
+This project is a simple portfolio webiste created in React. This application includes links to my resume, my contact information, and a few of my most notable projects. There is also information on my programming background, education, skills, and courses I have completed. The section containing the projects include interactive links/photos for a glimpse into each application
 
 ## React used in combination with Vite
 
