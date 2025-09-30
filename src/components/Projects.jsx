@@ -4,7 +4,7 @@ import { useState, useRef } from "react"
 import githubLogo from "../images/github-logo.png"
 import moreInfoIcon from "../images/more-info-icon.svg"
 import RevealSection from "../components/RevealSection"
-export default function Projects() {
+export default function Projects(props) {
     const [projects, setProjects] = useState(programs);
     const [isExpanded, setIsExpanded] = useState(false);
     const [imageExpanded, setImageExpanded] = useState(null);
@@ -124,7 +124,7 @@ export default function Projects() {
                      <p className="project-title">{project.name}</p>
                      <div>
                          <img className="more-info"
-                             title="More Info"
+                             title={project.toggleView ? "Show Less" : "Show More"}
                              onClick={() => handleMoreInfoClick(project.id)}
                              src={moreInfoIcon}></img>    
                          <img className="github-icon"
@@ -148,7 +148,7 @@ export default function Projects() {
     return (
         <>
             <RevealSection classSection="projects-section">
-                <div>
+                <div ref={props.sectionRef}>
                     <h1 className="section-title">Projects</h1>
                     <div className={`projects-container ${isExpanded ? "dimmed" : ""}`}>
                         {projectElements}

@@ -1,7 +1,7 @@
 ﻿import "../styles/Header.css"
 import devLogo from "../images/dev-logo.svg"
 
-export default function Header() {
+export default function Header(props) {
     return (
         <header>
             <div className="logo-container">
@@ -9,9 +9,9 @@ export default function Header() {
                 <img src={devLogo}></img>
             </div>
             <div className="links-container">
-                <h4 className="link-text">About</h4>
-                <h4 className="link-text">Projects</h4>
-                <h4 className="link-text">Contact</h4>
+                <h4 onClick={props.linkToAbout} className="link-text">About</h4>
+                <h4 onClick={props.linkToProjects} className="link-text">Projects</h4>
+                <h4 onClick={props.linkToContact} className="link-text">Contact</h4>
                 <a
                     target="_blank"
                     href="https://www.linkedin.com/in/kylaknauber/"

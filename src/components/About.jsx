@@ -1,6 +1,6 @@
 ﻿import "../styles/About.css"; 
 import RevealSection from "./RevealSection";
-export default function About() {
+export default function About(props) {
     const skills = ["Java", "JavaScript", "React", "C++", "C#",
         "HTML", "CSS", "Python", "Vue.js", "Node.js", "Firebase", "MySQL",
         "Oracle", "Web API", "Git", "GitHub", "Visual Studio", "VS Code", "JetBrains IDEs",
@@ -87,7 +87,7 @@ export default function About() {
 
     return (
         <RevealSection classSection="about-container">
-            <div className="about-info">
+            <div ref={props.sectionRef} className="about-info">
                 <h1>About</h1>
                 <RevealSection classSection="about-message">
                     I am an aspiring software developer with a passion for solving problems and creating efficient, user-friendly applications.

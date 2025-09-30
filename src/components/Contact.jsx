@@ -5,7 +5,7 @@ import phoneIcon from "../images/phone-icon.svg"
 import githubLogo from "../images/github-logo.png"
 import linkedinLogo from "../images/linkedin-logo.png"
 import RevealSection from "../components/RevealSection"
-export default function Contact() {
+export default function Contact(props) {
     const handleEmailClick = () => {
         window.open("mailto:kylaknauber@gmail.com", "_blank");
     }
@@ -24,7 +24,7 @@ export default function Contact() {
 
     return (
         <RevealSection classSection="contact-section">
-            <div>
+            <div ref={props.sectionRef}>
                 <h1>Contact Me</h1>
                 <div className="contact-info">
                     <RevealSection clickableFunc={handleLocationClick}
