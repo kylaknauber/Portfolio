@@ -4,6 +4,6 @@ This project is a simple portfolio webiste created in React. This application in
 
 ## React used in combination with Vite
 
-To run this application, clone this repository to a desired directory. Then, navigate to the directory that includes the "src" folder and run the command "npm install" for node modules. Finally, run the command "npm run dev" to start the application.
+To run this application, clone this repository to a desired directory. Then, navigate to the repository directory, the one includes the "src" folder, and run the command "npm install" for node modules. Finally, run the command "npm run dev" to start the application.
 
 ##### Creator: Kyla Knauber
