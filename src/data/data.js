@@ -64,12 +64,13 @@ export const programs = [
                 caption: "Profile Page for logged in user"
             }
         ],
-        toggleView: false
+        toggleView: false,
+        dates: "July 2025 - Present"
     },
     {
         id: 2,
         name: "UNO",
-        description: "Using skills in React, JavaScript, and CSS to create an UNO game for a user to play against the computer. Each player is dealt 7 cards randomly, then the application randomly selects which player to begin the game, to which they place one of their dealt cards. The game continues until one user is left with no cards Single page react application focusing on conditional rendering to create a user-friendly and efficient game. Includes a simple Firebase connection to store user's name, score, and date if they wish to upload such data.",
+        description: "Using skills in React, JavaScript, and CSS, I created an UNO game for a user to play against the computer. Each player is dealt 7 cards randomly, then the application randomly selects which player to begin the game, to which they place one of their dealt cards. The game continues until one user is left with no cards. This is a single page react application focusing on conditional rendering to create a user-friendly and efficient game. Includes a simple Firebase connection to store user's name, score, and date they played if they wish to upload such data.",
         languages: ["React", "JavaScript", "Firebase", "CSS"],
         link: "https://github.com/kylaknauber/UNO-Game",
         images: [
@@ -97,7 +98,8 @@ export const programs = [
                 caption: "Player is submitting score to Firestore"
             }
         ],
-        toggleView: false
+        toggleView: false,
+        dates: "May 2025 - Present"
     },
     {
         id: 3,
@@ -123,19 +125,20 @@ export const programs = [
             },
             {
                 src: capstone4,
-                caption: "Direct Message Screen between Patient (sender) and Physician (receiver)"
+                caption: "Direct Message Screen between Patient (sender) and Physician (receiver). Most recent messages appear at the top, and images a patient uploads can be viewed by their physician via direct messages."
             },
             {
                 src: capstone5,
                 caption: "Camera Screen for Patients"
             }
         ],
-        toggleView: false
+        toggleView: false,
+        dates: "January - April 2025"
     },
     {
         id: 4,
         name: "Mini C Compiler",
-        description: "Created a Mini C Compiler throughout Compilers class, including various sub projects like Tokenizer, Lexical Analyzer, Syntax Analyzer, Semantic Analyzer. Each project was created with Java, along with JFlex for the Lexical Analyzer, and BYACC/J for the bottom-up parser in the Semantic Analyzer. The Mini C Compiler tests Mini C code files for lexical errors, syntax errors, and semantic errors, in which a successful file would \"execute\" the said file.",
+        description: "Created a Mini C Compiler throughout Compilers class, including various sub projects like a Tokenizer, Lexical Analyzer, Syntax Analyzer, and Semantic Analyzer. Each project was created with Java, along with JFlex for the Lexical Analyzer, and BYACC/J for the bottom-up parser in the Semantic Analyzer. The Mini C Compiler tests Mini C code files for lexical errors, syntax errors, and semantic errors, in which a successful file would \"execute\" in the run time environment.",
         languages: ["Java", "BYaccJ", "JFlex"],
         link: "https://github.com/kylaknauber/Mini-C-Compiler",
         images: [
@@ -155,12 +158,13 @@ export const programs = [
                 caption: "Program is successfully compiled, showing the indented and formatted code, as well as the running environment and returned values from said code."
             }
         ],
-        toggleView: false
+        toggleView: false,
+        dates: "January - April 2025"
     },
     {
         id: 5,
         name: "Flappy Bird",
-        description: "Recreated Flappy Bird which uses the same format as the original game. In order to play the game, the user would left click or press the space bar to start, and then navigate the bird through the pipes without hitting the ground or pipes. Users can submit their score to Firestore if they choose.",
+        description: "Recreated Flappy Bird which uses the same format and objects as the original game. In order to play the game, the user would left click or press the space bar to start, and then navigate the bird through the pipes without hitting the ground or pipes. Users can submit their score to Firestore if they choose.",
         languages: ["Vue.js", "JavaScript", "HTML", "CSS", "Firebase"],
         link: "https://github.com/kylaknauber/Flappy-Bird",
         images: [
@@ -180,12 +184,13 @@ export const programs = [
                 caption: "Game Over Screen"
             }
         ],
-        toggleView: false
+        toggleView: false,
+        dates: "March 2025"
     },
     {
         id: 6,
         name: "TOH/Sliding Puzzle",
-        description: "Created a application which allows users to pick between playing two games: Towers of Hanoi or a Sliding Puzzle game. This was my first Angular application created in my web programming class.",
+        description: "Created an application which allows users to pick between playing two games: Towers of Hanoi or a Sliding Puzzle game. This was my first Angular application created in my web programming class.",
         languages: ["Angular", "TypeScript", "HTML", "CSS"],
         link: "https://github.com/kylaknauber/TOH-Sliding-Puzzle",
         images: [
@@ -217,7 +222,8 @@ export const programs = [
                 caption: "User is moving the block (3) to the open slot"
             }
         ],
-        toggleView: false
+        toggleView: false,
+        dates: "April 2025"
     }
 
 ]
