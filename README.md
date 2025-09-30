@@ -4,4 +4,4 @@ This project is a simple portfolio webiste created in React. This application in
 
 ### React used in combination with Vite
 
-### Creator: Kyla Knauber
+##### Creator: Kyla Knauber
