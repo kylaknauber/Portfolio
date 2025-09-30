@@ -42,8 +42,8 @@ export default function Footer() {
             <div className="sources">
                 <p>Sources</p>
                 <div>
-                    {pictureCredits.map(picture => (
-                        <a href={picture.link} title={picture.source}>{picture.name}</a>
+                    {pictureCredits.map((picture, index) => (
+                        <a key={index} href={picture.link} title={picture.source}>{picture.name}</a>
                     ))}
                 </div>
             </div>
