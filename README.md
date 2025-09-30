@@ -1,12 +1,16 @@
-# React + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple portfolio webiste created in React. This application includes links to my resume, my contact information, and a few of my most notable projects. There is also information on my programming background, education, skills, and courses I have completed. The section containing the projects include interactive links/photos for a glimpse into each application
 
-Currently, two official plugins are available:
+## React + Vite
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Running the Application
+1. Install Node.js on local machine, version 22.17.0 or later
+2. Create/navigate to a directory you want the repository to be in
+3. Clone the repository
+4. Navigate to the repository directory (should contain "src" folder, but make sure to not be inside the "src" folder)
+5. Open up a terminal if you haven't already, still making sure you are in the repository directory
+6. Run the command "npm install" for Node Modules
+7. Run the command "npm run dev" to start the application
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+#### Creator: Kyla Knauber
