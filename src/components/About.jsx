@@ -2,7 +2,7 @@
 import RevealSection from "./RevealSection";
 export default function About(props) {
     const skills = ["Java", "JavaScript", "React", "C++", "C#",
-        "HTML", "CSS", "Python", "Vue.js", "Node.js", "Firebase", "MySQL",
+        "HTML", "CSS", "Python", "Vue.js", "TypeScript", "Node.js", "Firebase", "MySQL",
         "Oracle", "Web API", "Git", "GitHub", "Visual Studio", "VS Code", "JetBrains IDEs",
         "Jest", "MS Office", "Problem-Solving", "Critical Thinking",
         "Collaboration", "Conflict Resolution"
@@ -90,13 +90,13 @@ export default function About(props) {
             <div ref={props.sectionRef} className="about-info">
                 <h1>About</h1>
                 <RevealSection classSection="about-message">
-                    I am an aspiring software developer with a passion for solving problems and creating efficient, user-friendly applications.
+                    I’m an aspiring software developer who loves tackling challenges and developing applications that make a real impact.
                     I recently graduated from Penn State University with a Bachelor of Science in Computer Science. I achieved a <span>3.88 GPA</span> and graduated <span>Cum Laude</span>.
                     I also was a member of <span>Upsilon Pi Epsilon</span>, the International Honor Society for the Computing and Information Disciplines, and I received
                     the <span>President Walker Award</span> for Academic Excellence. Throughout my academic career, I have developed strong skills in various programming languages and
                     technologies, including <span>Java</span>, <span>JavaScript</span>, <span>React</span> <span>C++</span>, <span>HTML</span>, <span>CSS</span>, <span>Python</span>, <span>C#</span>, <span>Vue.js</span>, <span>Node.js</span>, <span>Firebase</span> and <span>SQL</span>. I have also gained experience working on team projects, which
-                    has helped me develop strong communication and collaboration skills. Over the past few months, I have obtained certifications in courses through Scrimba and CodeAcademy
-                    to further my knowledge and skills in development, and applied new knowledge in a few personal projects I created, which can be found below.
+                    has helped me develop strong communication and collaboration skills. Over the past few months, I have obtained certifications in courses through Scrimba, CodeAcademy, and Microsoft Learn
+                    to further my knowledge and skills in development. I have also applied new and past knowledge to multiple personal projects I have been developing, which can be found below.
                     I am excited to start my career in software development and am eager to contribute my skills and knowledge!
                 </RevealSection>
                 <br></br>
